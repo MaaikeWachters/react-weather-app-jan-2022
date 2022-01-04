@@ -1,11 +1,12 @@
 import "./App.css";
 import Weather from "./Weather";
+import Loader from "react-loader-spinner";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="Rotterdam" />
+        <Weather defaultCity="Beijing" />
 
         <footer>
           This app was coded with 💖 &nbsp;by{" "}

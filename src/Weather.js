@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
+import Loader from "react-loader-spinner";
+
+
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -68,6 +71,14 @@ export default function Weather(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appID=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
-    return "Loading...";
+    return (
+      <Loader
+        type="BallTriangle"
+        color="#663399"
+        height={100}
+        width={100}
+        timeout={30000}
+      />
+    );
   }
 }
