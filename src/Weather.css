@@ -29,6 +29,7 @@
 .Weather canvas {
     margin-right: 10px;
 }
+
 .Weather .temperature {
     font-weight: bold;
     color: #663399;
